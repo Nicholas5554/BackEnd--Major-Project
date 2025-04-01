@@ -1,0 +1,15 @@
+23/02/2025 | 19:45:31 | GET | /tasks/67ba18b08dc16a90addd8608 | 500 | 5.338ms
+23/02/2025 | 20:03:41 | POST | /users/register | 400 | 13.000ms
+23/02/2025 | 20:04:18 | POST | /users/register | 400 | 12.209ms
+23/02/2025 | 20:04:49 | POST | /users/register | 400 | 12.973ms
+23/02/2025 | 20:17:52 | GET | /users/67bb637deedf3f9a7f877202 | 404 | 6.720ms
+23/02/2025 | 20:18:20 | GET | /users/ | 401 | 3.118ms
+23/02/2025 | 20:18:22 | GET | /users/67bb637deedf3f9a7f877202 | 404 | 6.725ms
+23/02/2025 | 20:18:56 | GET | /users/67bb637deedf3f9a7f877202 | 404 | 3.013ms
+23/02/2025 | 20:20:10 | GET | /users/67bb637deedf3f9a7f877202 | 404 | 14.152ms
+23/02/2025 | 20:21:18 | GET | /users/67bb637deedf3f9a7f877202 | 404 | 13.808ms
+23/02/2025 | 20:21:18 | GET | /users/67bb637deedf3f9a7f877202 | 404 | 3.549ms
+23/02/2025 | 20:21:19 | GET | /users/67bb637deedf3f9a7f877202 | 404 | 3.399ms
+23/02/2025 | 20:33:28 | GET | /users/67bb637deedf3f9a7f877202 | 400 | 3.348ms
+23/02/2025 | 20:37:02 | GET | /tasks/67af5733cd4cf47cf7f4ac6e | 500 | 3.421ms
+23/02/2025 | 20:38:14 | GET | /tasks/67bb606f9dec2f4d7bbba15c | 500 | 2.584ms

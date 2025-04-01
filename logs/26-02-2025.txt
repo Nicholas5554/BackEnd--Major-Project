@@ -1,0 +1,16 @@
+26/02/2025 | 18:54:32 | PATCH | /tasks/67bf45fa202bd1fb70947c56 | 404 | 20.912ms
+26/02/2025 | 18:55:09 | PATCH | /tasks/67bf45fa202bd1fb70947c56 | 404 | 2.809ms
+26/02/2025 | 18:55:17 | PATCH | /tasks/67bf45fa202bd1fb70947c56 | 404 | 11.439ms
+26/02/2025 | 18:57:57 | GET | /HNAP1/ | 404 | 8.017ms
+26/02/2025 | 18:59:55 | GET | /tasks/67bf45fa202bd1fb70947c56 | 500 | 4.531ms
+26/02/2025 | 19:08:37 | GET | /discussions/67bf49b1891a347820f238d0 | 500 | 15.357ms
+26/02/2025 | 19:09:11 | DELETE | /discussions/ | 404 | 4.553ms
+26/02/2025 | 19:09:36 | POST | /discussions/67bf4ab2fd38181c17269f90 | 404 | 11.018ms
+26/02/2025 | 19:10:03 | GET | /discussions/67bf4ad35dbd0b5adcd8a27c/comments | 400 | 4.302ms
+26/02/2025 | 19:13:44 | DELETE | /discussions/discussionId/67bf4ad35dbd0b5adcd8a27c/comments/67bf4b5caeb278a504c78701 | 404 | 12.281ms
+26/02/2025 | 19:14:19 | GET | /discussions/67bf4ad35dbd0b5adcd8a27c/comments/ | 400 | 4.438ms
+26/02/2025 | 19:32:25 | POST | /users/ | 404 | 20.947ms
+26/02/2025 | 19:35:58 | PUT | /users/ | 404 | 22.072ms
+26/02/2025 | 19:36:20 | PUT | /users/67bf4d244be3b5617d663d69 | 401 | 1.685ms
+26/02/2025 | 19:46:22 | GET | /users/67bf5037e971fd28858bcb32 | 400 | 16.272ms
+26/02/2025 | 20:00:01 | PUT | /users/67b3735bb3958584603d81bb | 400 | 3.912ms

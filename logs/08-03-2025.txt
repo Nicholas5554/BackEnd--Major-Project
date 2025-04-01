@@ -1,0 +1,8 @@
+08/03/2025 | 12:10:08 | GET | /users | 401 | 30.194ms
+08/03/2025 | 12:20:15 | POST | /users/register | 400 | 2.592ms
+08/03/2025 | 12:21:11 | POST | /users/register | 400 | 8.504ms
+08/03/2025 | 12:21:31 | POST | /users/register | 400 | 5.306ms
+08/03/2025 | 12:26:55 | PUT | /users/67cc1a515d0b2bbd24900141 | 400 | 3.256ms
+08/03/2025 | 12:32:19 | PATCH | /users/67ae2171d2e1af01f1796c2a | 401 | 0.333ms
+08/03/2025 | 16:49:07 | GET | /tasks/myAssignedTasks | 400 | 6.706ms
+08/03/2025 | 17:24:13 | GET | /HNAP1/ | 404 | 2.048ms

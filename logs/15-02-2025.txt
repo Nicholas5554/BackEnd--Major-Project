@@ -1,0 +1,6 @@
+15/02/2025 | 12:14:51 | GET | /discussions/67b067cbde1ac7e634dd391e | 500 | 13.411ms
+15/02/2025 | 12:15:03 | GET | /discussions/67b067cbde1ac7e634dd391e | 500 | 17.305ms
+15/02/2025 | 12:16:09 | GET | /discussions/67b067cbde1ac7e634dd391e | 500 | 7.662ms
+15/02/2025 | 12:36:00 | GET | /discussions/67b066b65391560bfe84adcf | 500 | 9.431ms
+15/02/2025 | 13:01:19 | PATCH | /discussions/67b067cbde1ac7e634dd391e | 400 | 14.742ms
+15/02/2025 | 13:01:33 | PATCH | /discussions/67b067cbde1ac7e634dd391e | 500 | 17.349ms

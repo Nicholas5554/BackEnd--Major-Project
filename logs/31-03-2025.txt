@@ -1,0 +1,9 @@
+31/03/2025 | 19:47:11 | POST | /discussions/ | 400 | 2.638ms
+31/03/2025 | 19:48:28 | DELETE | /tasks/67eac724beceb44eb6287d5d | 404 | 8.444ms
+31/03/2025 | 19:48:44 | DELETE | /tasks/67eac724beceb44eb6287d5d | 404 | 3.271ms
+31/03/2025 | 19:59:50 | GET | /discussions/ | 401 | 0.862ms
+31/03/2025 | 19:59:50 | GET | /favicon.ico | 404 | 3.934ms
+31/03/2025 | 20:17:24 | GET | /discussions/67eac7abbeceb44eb6287d6c | 401 | 0.881ms
+31/03/2025 | 20:17:24 | GET | /discussions/67eac7abbeceb44eb6287d6c | 401 | 1.723ms
+31/03/2025 | 20:22:44 | GET | /discussions/ | 401 | 1.030ms
+31/03/2025 | 20:22:44 | GET | /favicon.ico | 404 | 2.359ms

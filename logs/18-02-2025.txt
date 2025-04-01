@@ -1,0 +1,4 @@
+18/02/2025 | 20:20:57 | GET | /discussions/comments/67b37751ef6c0c8b3c98e508 | 401 | 24.249ms
+18/02/2025 | 20:38:09 | GET | /users/67b3735bb3958584603d81bb | 401 | 12.264ms
+18/02/2025 | 20:46:21 | GET | /discussions/comments/67b37751ef6c0c8b3c98e508 | 401 | 4.351ms
+18/02/2025 | 20:46:34 | DELETE | /discussions/comments/67b37751ef6c0c8b3c98e508 | 400 | 20.164ms

@@ -1,0 +1,10 @@
+23/03/2025 | 17:04:01 | GET | /users/67de9ccab79c4ddf8eda6e22 | 401 | 11.009ms
+23/03/2025 | 17:04:01 | GET | /tasks | 401 | 13.646ms
+23/03/2025 | 17:04:01 | GET | /users/67de9ccab79c4ddf8eda6e22 | 401 | 16.609ms
+23/03/2025 | 17:04:01 | GET | /tasks | 401 | 19.023ms
+23/03/2025 | 17:37:23 | GET | /tasks67dec7e9b79c4ddf8eda6e69 | 404 | 4.333ms
+23/03/2025 | 17:37:25 | GET | /tasks67dec7e9b79c4ddf8eda6e69 | 404 | 2.476ms
+23/03/2025 | 17:37:25 | GET | /tasks67dec7e9b79c4ddf8eda6e69 | 404 | 3.755ms
+23/03/2025 | 17:46:50 | GET | /tasks/ | 401 | 0.836ms
+23/03/2025 | 17:46:50 | GET | /favicon.ico | 404 | 1.620ms
+23/03/2025 | 20:35:28 | PATCH | /users/67de9ccab79c4ddf8eda6e22 | 400 | 39.301ms

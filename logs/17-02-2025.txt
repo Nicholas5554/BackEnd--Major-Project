@@ -1,0 +1,14 @@
+17/02/2025 | 19:23:18 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 2.442ms
+17/02/2025 | 19:23:40 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 17.749ms
+17/02/2025 | 19:23:56 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 12.516ms
+17/02/2025 | 19:24:32 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 14.167ms
+17/02/2025 | 19:25:10 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 13.117ms
+17/02/2025 | 19:26:08 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 16.814ms
+17/02/2025 | 19:27:06 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 25.627ms
+17/02/2025 | 19:28:44 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 30.976ms
+17/02/2025 | 19:32:10 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 3.102ms
+17/02/2025 | 19:35:54 | GET | /users/ | 401 | 5.325ms
+17/02/2025 | 19:45:27 | GET | /HNAP1/ | 404 | 5.412ms
+17/02/2025 | 19:47:02 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 24.698ms
+17/02/2025 | 19:51:24 | PATCH | /discussions/67b22719f1d8d2f8e3d24802/comments | 500 | 13.519ms
+17/02/2025 | 20:03:16 | GET | /discussions/67b37751ef6c0c8b3c98e508 | 500 | 7.389ms
