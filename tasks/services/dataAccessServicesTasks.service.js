@@ -1,9 +1,11 @@
 import Task from "../models/tasks.schema.js"
-
+import User from "../../users/models/user.schema.js"
 
 const getAllTasks = async (alltasks) => {
     try {
-        const tasks = await Task.find(alltasks);
+        const tasks = await Task.find(alltasks)
+            .populate("userId", "name.first name.last")
+            .populate("assignedTo", "name.first name.last");
         if (!tasks) {
             throw new Error("Did not find tasks")
         }
@@ -15,7 +17,9 @@ const getAllTasks = async (alltasks) => {
 
 const getTaskById = async (taskId) => {
     try {
-        const task = Task.findById(taskId);
+        const task = Task.findById(taskId)
+            .populate("userId", "name.first name.last")
+            .populate("assignedTo", "name.first name.last");
         if (!task) {
             throw new Error("Did not find task")
         }
@@ -28,7 +32,9 @@ const getTaskById = async (taskId) => {
 
 const getTaskByUserId = async (userId) => {
     try {
-        const task = await Task.find({ userId });
+        const task = await Task.find({ userId })
+            .populate("userId", "name.first name.last")
+            .populate("assignedTo", "name.first name.last");
         if (!task) {
             throw new Error("Did not find the task");
         }
@@ -40,7 +46,9 @@ const getTaskByUserId = async (userId) => {
 
 const getTaskByAssign = async (assignedTo) => {
     try {
-        const task = await Task.find({ assignedTo });
+        const task = await Task.find({ assignedTo })
+            .populate("userId", "name.first name.last")
+            .populate("assignedTo", "name.first name.last");
         if (!task) {
             throw new Error("did not find the task");
         }
@@ -52,12 +60,18 @@ const getTaskByAssign = async (assignedTo) => {
 
 const createTask = async (newtask) => {
     try {
-        const task = new Task(newtask);
+        const task = new Task(newtask)
         await task.save();
-        if (!task) {
-            throw new Error("task was not added");
+
+        const populatedTask = await Task.findById(task._id)
+            .populate("userId", "name.first name.last")
+            .populate("assignedTo", "name.first name.last");
+
+        if (!populatedTask) {
+            throw new Error("Task was not added");
         }
-        return task;
+
+        return populatedTask;
     } catch (err) {
         throw new Error(err);
     }

@@ -5,7 +5,6 @@ import { adminOnly, adminOrManagerOnly, adminOrUserTask, adminOrUserTaskOrAssign
 import taskValidation from "../models/taskValidation.schema.js";
 import taskStatusValidation from "../models/taskStatusValidation.schema.js";
 import { io } from "../../server.js";
-import Task from "../models/tasks.schema.js"
 
 
 const tasksRouter = Router();
@@ -41,7 +40,7 @@ tasksRouter.get("/my-createdTasks", auth, async (req, res) => {
 tasksRouter.get("/myAssignedTasks", auth, async (req, res) => {
     try {
         const user = req.user;
-        const tasks = await Task.find({ assignedTo: user._id });
+        const tasks = await getTaskByAssign(user._id);
         if (!tasks || tasks.length === 0) {
             return res.status(400).send("no tasks found");
         }

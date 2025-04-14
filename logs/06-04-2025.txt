@@ -1,0 +1,16 @@
+06/04/2025 | 19:40:05 | GET | /users/67e2f756940f62f9134ff136 | 401 | 13.473ms
+06/04/2025 | 19:40:05 | GET | /users/67e2f756940f62f9134ff136 | 401 | 17.445ms
+06/04/2025 | 19:45:19 | GET | /tasks/myAssignedTasks | 400 | 9.099ms
+06/04/2025 | 19:45:19 | GET | /tasks/myAssignedTasks | 400 | 11.104ms
+06/04/2025 | 20:08:29 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 11.116ms
+06/04/2025 | 20:08:34 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 6.781ms
+06/04/2025 | 20:09:17 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 10.129ms
+06/04/2025 | 20:09:17 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 9.849ms
+06/04/2025 | 20:09:27 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 4.913ms
+06/04/2025 | 20:09:27 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 11.598ms
+06/04/2025 | 20:09:33 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 3.865ms
+06/04/2025 | 20:09:33 | GET | /discussions/67ed81affaa7ac81be879157 | 500 | 6.092ms
+06/04/2025 | 20:13:03 | GET | /tasks/myAssignedTasks | 400 | 6.084ms
+06/04/2025 | 20:13:03 | GET | /tasks/myAssignedTasks | 400 | 10.286ms
+06/04/2025 | 20:28:45 | GET | /discussions/my-discussions | 401 | 0.969ms
+06/04/2025 | 20:28:45 | GET | /favicon.ico | 404 | 5.481ms

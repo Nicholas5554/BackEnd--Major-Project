@@ -154,14 +154,10 @@ const addComment = async (discussionId, newComment) => {
 const likeComment = async (discussionId, commentId, userId) => {
     try {
         const discussion = await Discussion.findById(discussionId);
-        if (!discussion) {
-            throw new Error("Discussion not found");
-        }
+        if (!discussion) throw new Error("Discussion not found");
 
         const comment = discussion.comments.find(c => c._id.toString() === commentId);
-        if (!comment) {
-            throw new Error("Comment not found");
-        }
+        if (!comment) throw new Error("Comment not found");
 
         const updateQuery = comment.likes.includes(userId)
             ? { $pull: { "comments.$.likes": userId } }
@@ -173,12 +169,17 @@ const likeComment = async (discussionId, commentId, userId) => {
             { new: true }
         );
 
-        return updatedDiscussion;
+        const updatedComment = updatedDiscussion.comments.find(
+            (c) => c._id.toString() === commentId
+        );
+
+        return updatedComment;
 
     } catch (err) {
         throw new Error(err.message);
     }
 };
+
 
 const deleteComment = async (discussionId, commentId) => {
     try {
