@@ -5,7 +5,10 @@ const { pick } = lodash
 
 const getAllDiscussions = async (allDiscussions) => {
     try {
-        const discussion = await Discussion.find(allDiscussions);
+        const discussion = await Discussion.find(allDiscussions)
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last");
         if (!discussion) {
             throw new Error("did find discussions")
         }
@@ -17,7 +20,10 @@ const getAllDiscussions = async (allDiscussions) => {
 
 const getDiscussionById = async (discussionId) => {
     try {
-        const discussion = await Discussion.findById(discussionId);
+        const discussion = await Discussion.findById(discussionId)
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last");
         if (!discussion) {
             throw new Error("discussion was not found")
         }
@@ -29,7 +35,10 @@ const getDiscussionById = async (discussionId) => {
 
 const getDiscussionByCreatedUserId = async (userId) => {
     try {
-        const discussion = await Discussion.find({ userId });
+        const discussion = await Discussion.find({ userId })
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last");
         if (!discussion) {
             throw new Error("discussion was not found");
         }
@@ -41,7 +50,10 @@ const getDiscussionByCreatedUserId = async (userId) => {
 
 const getDiscussionByAddedUserId = async (users) => {
     try {
-        const discussion = await Discussion.find({ users });
+        const discussion = await Discussion.find({ users })
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last");
         if (!discussion) {
             throw new Error("discussion was not found");
         }
@@ -53,7 +65,10 @@ const getDiscussionByAddedUserId = async (users) => {
 
 const createDiscussion = async (newDiscussion) => {
     try {
-        const discussion = new Discussion(newDiscussion);
+        const discussion = new Discussion(newDiscussion)
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last")
         await discussion.save();
         if (!discussion) {
             throw new Error("discussion was not added")
@@ -100,7 +115,10 @@ const deleteDiscussion = async (discussionId) => {
 
 const getCommentsByDiscussionId = async (discussionId) => {
     try {
-        const discussion = await Discussion.findById(discussionId);
+        const discussion = await Discussion.findById(discussionId)
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last");
 
         if (!discussion) {
             throw new Error("Discussion not found");
@@ -114,7 +132,10 @@ const getCommentsByDiscussionId = async (discussionId) => {
 
 const getCommentById = async (discussionId, commentId) => {
     try {
-        const discussion = await Discussion.findById(discussionId);
+        const discussion = await Discussion.findById(discussionId)
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last");
 
         if (!discussion) {
             throw new Error("Comment not found");
@@ -153,7 +174,10 @@ const addComment = async (discussionId, newComment) => {
 
 const likeComment = async (discussionId, commentId, userId) => {
     try {
-        const discussion = await Discussion.findById(discussionId);
+        const discussion = await Discussion.findById(discussionId)
+            .populate("userId", "name.first name.last")
+            .populate("users", "name.first name.last")
+            .populate("comments.userId", "name.first name.last");
         if (!discussion) throw new Error("Discussion not found");
 
         const comment = discussion.comments.find(c => c._id.toString() === commentId);

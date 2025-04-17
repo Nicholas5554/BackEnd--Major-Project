@@ -1,5 +1,4 @@
 import Task from "../models/tasks.schema.js"
-import User from "../../users/models/user.schema.js"
 
 const getAllTasks = async (alltasks) => {
     try {
