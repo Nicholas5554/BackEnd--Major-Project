@@ -175,9 +175,6 @@ const addComment = async (discussionId, newComment) => {
 const likeComment = async (discussionId, commentId, userId) => {
     try {
         const discussion = await Discussion.findById(discussionId)
-            .populate("userId", "name.first name.last")
-            .populate("users", "name.first name.last")
-            .populate("comments.userId", "name.first name.last");
         if (!discussion) throw new Error("Discussion not found");
 
         const comment = discussion.comments.find(c => c._id.toString() === commentId);
@@ -191,7 +188,7 @@ const likeComment = async (discussionId, commentId, userId) => {
             { _id: discussionId, "comments._id": commentId },
             updateQuery,
             { new: true }
-        );
+        ).populate("comments.userId", "name.first name.last");
 
         const updatedComment = updatedDiscussion.comments.find(
             (c) => c._id.toString() === commentId
