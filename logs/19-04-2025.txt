@@ -1,2 +1,17 @@
 19/04/2025 | 19:19:36 | GET | /users/67e2f756940f62f9134ff136 | 401 | 5.352ms
 19/04/2025 | 19:19:36 | GET | /users/67e2f756940f62f9134ff136 | 401 | 1.412ms
+19/04/2025 | 19:52:52 | PATCH | /users/67e2f756940f62f9134ff136 | 400 | 3.432ms
+19/04/2025 | 19:52:56 | PATCH | /users/67e2f756940f62f9134ff136 | 400 | 4.244ms
+19/04/2025 | 19:56:03 | PATCH | /users/67e2f756940f62f9134ff136 | 400 | 3.604ms
+19/04/2025 | 19:56:16 | PATCH | /users/67e2f756940f62f9134ff136 | 400 | 2.898ms
+19/04/2025 | 19:56:22 | PATCH | /users/67e2f756940f62f9134ff136 | 400 | 3.371ms
+19/04/2025 | 20:13:08 | GET | /tasks/myAssignedTasks | 400 | 4.897ms
+19/04/2025 | 20:13:08 | GET | /tasks/myAssignedTasks | 400 | 4.236ms
+19/04/2025 | 20:15:05 | POST | /discussions | 500 | 4.372ms
+19/04/2025 | 20:15:07 | POST | /discussions | 500 | 2.447ms
+19/04/2025 | 20:15:19 | POST | /discussions | 500 | 2.718ms
+19/04/2025 | 20:15:34 | POST | /discussions | 500 | 2.476ms
+19/04/2025 | 20:16:24 | POST | /discussions | 500 | 25.536ms
+19/04/2025 | 20:16:25 | POST | /discussions | 500 | 2.982ms
+19/04/2025 | 20:17:08 | GET | /discussions/6803da8072c835562bb5356f/comments | 400 | 19.961ms
+19/04/2025 | 20:17:08 | GET | /discussions/6803da8072c835562bb5356f/comments | 400 | 23.755ms

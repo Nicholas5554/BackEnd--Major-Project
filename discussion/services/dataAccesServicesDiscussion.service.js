@@ -66,9 +66,6 @@ const getDiscussionByAddedUserId = async (users) => {
 const createDiscussion = async (newDiscussion) => {
     try {
         const discussion = new Discussion(newDiscussion)
-            .populate("userId", "name.first name.last")
-            .populate("users", "name.first name.last")
-            .populate("comments.userId", "name.first name.last")
         await discussion.save();
         if (!discussion) {
             throw new Error("discussion was not added")
