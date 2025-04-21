@@ -86,7 +86,7 @@ export const adminOrUserTaskOrAssignedToUser = async (req, res, next) => {
             return res.status(404).send("Task not found");
         }
 
-        if (!user.isAdmin && user._id.toString() !== task.userId.toString() && user._id !== task.assignedTo.toString()) {
+        if (!user.isAdmin && user._id.toString() !== task.userId.toString() && user._id !== task.assignedTo._id.toString()) {
             return res.status(401).send("Unauthorized user");
         }
         next();
@@ -105,7 +105,7 @@ export const adminOrUserDiscussionOrActiveUser = async (req, res, next) => {
         }
         if (user._id.toString() !== discussion.userId.toString() &&
             !user.isAdmin &&
-            !discussion.users.includes(user._id.toString())) {
+            !discussion.users.some(u => u._id.toString() === user._id.toString())) {
             return res.status(401).send("Unauthorized user");
         }
         next();
@@ -128,7 +128,7 @@ export const adminOrActiveUserOrCommentedUser = async (req, res, next) => {
         if (discussion.userId.toString() !== user._id.toString() &&
             comment.userId.toString() !== user._id.toString() &&
             !user.isAdmin &&
-            !discussion.users.includes(user._id.toString())) {
+            !discussion.users.some(u => u._id.toString() === user._id.toString())) {
             return res.status(401).send("Unauthorized user");
         }
         next();
