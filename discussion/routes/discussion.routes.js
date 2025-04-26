@@ -215,7 +215,7 @@ discussionRouter.patch("/:id/comments", auth, adminOrUserDiscussionOrActiveUser,
 });
 
 // delete a comment by it's id
-discussionRouter.delete("/:discussionId/comments/:commentId", auth, adminOrDiscussionUserComments, async (req, res) => {
+discussionRouter.delete("/:discussionId/comments/:commentId", auth, async (req, res) => {
     try {
         const { discussionId, commentId } = req.params;
         const comment = await deleteComment(discussionId, commentId);
