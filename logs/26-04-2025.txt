@@ -46,3 +46,7 @@
 26/04/2025 | 17:51:28 | GET | /discussions/6807dd713e6facdfa5043d79/comments | 400 | 36.462ms
 26/04/2025 | 17:51:36 | GET | /discussions/680ca7f5f5b49edf1a94dbe0/comments | 400 | 24.281ms
 26/04/2025 | 17:51:36 | GET | /discussions/680ca7f5f5b49edf1a94dbe0/comments | 400 | 26.961ms
+26/04/2025 | 17:55:51 | GET | /tasks/myAssignedTasks | 400 | 5.273ms
+26/04/2025 | 17:55:51 | GET | /tasks/myAssignedTasks | 400 | 6.488ms
+26/04/2025 | 18:39:38 | GET | /tasks/myAssignedTasks | 400 | 4.917ms
+26/04/2025 | 18:39:38 | GET | /tasks/myAssignedTasks | 400 | 7.305ms
