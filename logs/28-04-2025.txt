@@ -12,3 +12,7 @@
 28/04/2025 | 20:33:45 | DELETE | /tasks/680ca63df5b49edf1a94db1b | 500 | 12.099ms
 28/04/2025 | 20:33:59 | DELETE | /tasks/680ca63df5b49edf1a94db1b | 500 | 4.309ms
 28/04/2025 | 20:34:37 | DELETE | /discussions/6807dd713e6facdfa5043d79 | 500 | 16.624ms
+28/04/2025 | 20:37:09 | DELETE | /tasks/68067b3781ee742892240486 | 500 | 12.897ms
+28/04/2025 | 20:37:37 | DELETE | /tasks/68067b3781ee742892240486 | 500 | 14.009ms
+28/04/2025 | 20:38:28 | GET | /tasks/myAssignedTasks | 400 | 3.792ms
+28/04/2025 | 20:38:28 | GET | /tasks/myAssignedTasks | 400 | 5.194ms
