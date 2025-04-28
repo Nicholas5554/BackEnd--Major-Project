@@ -1,9 +1,9 @@
 [
     {
         "name": {
-            "first": "Nick",
+            "first": "Admin",
             "middle": "",
-            "last": "Nicko"
+            "last": "Admin"
         },
         "image": {
             "url": "https://cdn.mos.cms.futurecdn.net/o2QR532EoNCFnrvjuia6r6-320-80.jpg",
@@ -12,8 +12,8 @@
         "isManager": true,
         "isAdmin": true,
         "phone": "0541231234",
-        "email": "nick@gmail.com",
-        "password": "Nick1234!",
+        "email": "admin@gmail.com",
+        "password": "Admin1234!",
         "address": {
             "country": "Israel",
             "city": "Ashdod",

@@ -1,0 +1,14 @@
+28/04/2025 | 20:27:09 | POST | /users/login | 404 | 11.898ms
+28/04/2025 | 20:28:17 | GET | /tasks/myAssignedTasks | 400 | 2.346ms
+28/04/2025 | 20:28:28 | GET | /tasks/myAssignedTasks | 400 | 2.677ms
+28/04/2025 | 20:29:33 | GET | /tasks/myAssignedTasks | 400 | 2.238ms
+28/04/2025 | 20:29:43 | GET | /tasks/myAssignedTasks | 400 | 2.194ms
+28/04/2025 | 20:30:09 | GET | /tasks/myAssignedTasks | 400 | 2.329ms
+28/04/2025 | 20:30:20 | GET | /tasks/myAssignedTasks | 400 | 2.603ms
+28/04/2025 | 20:32:14 | GET | /tasks/myAssignedTasks | 400 | 4.835ms
+28/04/2025 | 20:32:14 | GET | /tasks/myAssignedTasks | 400 | 3.164ms
+28/04/2025 | 20:33:33 | GET | /tasks/myAssignedTasks | 400 | 5.693ms
+28/04/2025 | 20:33:33 | GET | /tasks/myAssignedTasks | 400 | 7.006ms
+28/04/2025 | 20:33:45 | DELETE | /tasks/680ca63df5b49edf1a94db1b | 500 | 12.099ms
+28/04/2025 | 20:33:59 | DELETE | /tasks/680ca63df5b49edf1a94db1b | 500 | 4.309ms
+28/04/2025 | 20:34:37 | DELETE | /discussions/6807dd713e6facdfa5043d79 | 500 | 16.624ms
