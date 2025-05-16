@@ -16,3 +16,15 @@
 28/04/2025 | 20:37:37 | DELETE | /tasks/68067b3781ee742892240486 | 500 | 14.009ms
 28/04/2025 | 20:38:28 | GET | /tasks/myAssignedTasks | 400 | 3.792ms
 28/04/2025 | 20:38:28 | GET | /tasks/myAssignedTasks | 400 | 5.194ms
+28/04/2025 | 21:12:02 | GET | /tasks/myAssignedTasks | 400 | 3.815ms
+28/04/2025 | 21:12:02 | GET | /tasks/myAssignedTasks | 400 | 5.851ms
+28/04/2025 | 21:21:12 | GET | /tasks/myAssignedTasks | 400 | 9.811ms
+28/04/2025 | 21:21:12 | GET | /tasks/myAssignedTasks | 400 | 11.777ms
+28/04/2025 | 21:32:14 | GET | /tasks/myAssignedTasks | 400 | 6.630ms
+28/04/2025 | 21:32:14 | GET | /tasks/myAssignedTasks | 400 | 7.521ms
+28/04/2025 | 21:49:09 | GET | /tasks/myAssignedTasks | 400 | 4.691ms
+28/04/2025 | 21:49:09 | GET | /tasks/myAssignedTasks | 400 | 4.334ms
+28/04/2025 | 22:05:16 | GET | /tasks/myAssignedTasks | 400 | 5.894ms
+28/04/2025 | 22:05:16 | GET | /tasks/myAssignedTasks | 400 | 4.885ms
+28/04/2025 | 22:05:28 | GET | /tasks/myAssignedTasks | 400 | 3.652ms
+28/04/2025 | 22:05:28 | GET | /tasks/myAssignedTasks | 400 | 6.278ms

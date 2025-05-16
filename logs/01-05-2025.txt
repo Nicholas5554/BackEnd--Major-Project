@@ -1,0 +1,2 @@
+01/05/2025 | 14:48:06 | GET | /tasks/myAssignedTasks | 400 | 8.752ms
+01/05/2025 | 14:48:06 | GET | /tasks/myAssignedTasks | 400 | 11.256ms
