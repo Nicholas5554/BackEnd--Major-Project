@@ -92,7 +92,7 @@ discussionRouter.post("/", auth, async (req, res) => {
 });
 
 // update a discussion (must be logged and the user who created it or an admin)
-discussionRouter.put("/:id", auth, adminOrDiscussionUser, async (req, res) => {
+discussionRouter.put("/:id", auth, async (req, res) => {
     const { error } = discussionValidation.validate(req.body, { abortEarly: false });
 
     if (error) {
@@ -117,7 +117,7 @@ discussionRouter.put("/:id", auth, adminOrDiscussionUser, async (req, res) => {
 
 
 // delete a discussion (must be logged and the user who created it or an admin)
-discussionRouter.delete("/:id", auth, adminOrDiscussionUser, async (req, res) => {
+discussionRouter.delete("/:id", auth, async (req, res) => {
     try {
         const discussion = await deleteDiscussion(req.params.id);
         if (!discussion) {

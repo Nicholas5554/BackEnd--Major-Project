@@ -88,7 +88,7 @@ tasksRouter.post("/", auth, adminOrManagerOnly, async (req, res) => {
 });
 
 // update task (only the user who created the task or an admin)
-tasksRouter.put("/:id", auth, adminOrUserTask, async (req, res) => {
+tasksRouter.put("/:id", auth, async (req, res) => {
     const { error } = taskValidation.validate(req.body, { abortEarly: false });
     if (error) {
         return res.status(400).json({ errors: error.details.map((e) => e.message) });
@@ -112,7 +112,7 @@ tasksRouter.put("/:id", auth, adminOrUserTask, async (req, res) => {
 
 
 // delete a task (only the user who created or an admin)
-tasksRouter.delete("/:id", auth, adminOrUserTask, async (req, res) => {
+tasksRouter.delete("/:id", auth, async (req, res) => {
     const task = await getTaskById(req.params.id);
 
     try {
