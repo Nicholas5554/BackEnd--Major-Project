@@ -18,7 +18,7 @@ export const adminOrManagerOnly = async (req, res, next) => {
     const user = await req.user;
 
     try {
-        if (!user.isManager && !user.isAdmin) {
+        if (!user.isAdmin && !user.isManager) {
             return res.status(401).send("Unauthorized user")
         }
         next();
@@ -86,7 +86,7 @@ export const adminOrUserTaskOrAssignedToUser = async (req, res, next) => {
             return res.status(404).send("Task not found");
         }
 
-        if (!user.isAdmin && user._id.toString() !== task.userId.toString() && user._id !== task.assignedTo._id.toString()) {
+        if (!user.isAdmin && user._id.toString() !== task.userId._id.toString() && user._id !== task.assignedTo._id.toString()) {
             return res.status(401).send("Unauthorized user");
         }
         next();
