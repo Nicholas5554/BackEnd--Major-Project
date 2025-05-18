@@ -103,8 +103,8 @@ export const adminOrUserDiscussionOrActiveUser = async (req, res, next) => {
         if (!discussion) {
             return res.status(404).send("discussion not found");
         }
-        if (user._id.toString() !== discussion.userId.toString() &&
-            !user.isAdmin &&
+        if (!user.isAdmin &&
+            user._id.toString() !== discussion.userId._id.toString() &&
             !discussion.users.some(u => u._id.toString() === user._id.toString())) {
             return res.status(401).send("Unauthorized user");
         }
@@ -125,8 +125,8 @@ export const adminOrActiveUserOrCommentedUser = async (req, res, next) => {
         if (!comment) {
             return res.status(404).send("comment was not found");
         }
-        if (discussion.userId.toString() !== user._id.toString() &&
-            comment.userId.toString() !== user._id.toString() &&
+        if (
+            comment.userId._id.toString() !== user._id.toString() &&
             !user.isAdmin &&
             !discussion.users.some(u => u._id.toString() === user._id.toString())) {
             return res.status(401).send("Unauthorized user");
