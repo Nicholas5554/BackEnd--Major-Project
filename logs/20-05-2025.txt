@@ -1,0 +1,5 @@
+20/05/2025 | 19:13:39 | POST | /users/login | 404 | 51.958ms
+20/05/2025 | 19:47:05 | GET | /discussions/682caab6e9fc2fbdac2f6104/comments | 400 | 12.648ms
+20/05/2025 | 19:47:05 | GET | /discussions/682caab6e9fc2fbdac2f6104/comments | 400 | 15.594ms
+20/05/2025 | 19:48:58 | GET | /discussions/682caab6e9fc2fbdac2f6104/comments | 400 | 11.660ms
+20/05/2025 | 19:48:58 | GET | /discussions/682caab6e9fc2fbdac2f6104/comments | 400 | 14.731ms
