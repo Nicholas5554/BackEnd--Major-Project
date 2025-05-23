@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { getAllTasks, getTaskById, createTask, updateTask, getTaskByUserId, deleteTask, getTaskByAssign } from "../services/dataAccessServicesTasks.service.js";
 import { auth } from "../../middlewares/auth.js";
-import { adminOnly, adminOrManagerOnly, adminOrUserTask, adminOrUserTaskOrAssignedToUser, userOnly } from "../../middlewares/userAuthentication.js";
+import { adminOnly, adminOrManagerOnly, adminOrUserTaskOrAssignedToUser } from "../../middlewares/userAuthentication.js";
 import taskValidation from "../models/taskValidation.schema.js";
 import taskStatusValidation from "../models/taskStatusValidation.schema.js";
 import { io } from "../../server.js";

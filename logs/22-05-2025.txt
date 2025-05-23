@@ -1,2 +1,4 @@
 22/05/2025 | 21:06:35 | GET | /users/682caa6b66df045bb230c4b8 | 401 | 10.675ms
 22/05/2025 | 21:06:35 | GET | /users/682caa6b66df045bb230c4b8 | 401 | 12.678ms
+22/05/2025 | 21:33:21 | GET | /tasks/myAssignedTasks | 400 | 3.736ms
+22/05/2025 | 21:33:21 | GET | /tasks/myAssignedTasks | 400 | 4.044ms
