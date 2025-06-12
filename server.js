@@ -49,7 +49,7 @@ io.on("connection", (socket) => {
 });
 
 // Database Connection & Seeding
-const startServer = async () => {
+/* const startServer = async () => {
     try {
         await conn();
         const usersFromDb = await User.find();
@@ -69,6 +69,6 @@ const startServer = async () => {
     } catch (error) {
         console.error("Database connection failed:", error);
     }
-};
+}; */
 
 startServer();
