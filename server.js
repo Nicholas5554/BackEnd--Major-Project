@@ -42,7 +42,6 @@ app.use((err, req, res, next) => {
 const startServer = async () => {
     try {
         await conn();
-        await User.find();
 
         if (SEED_ADMIN === "true") {
             const existing = await User.findOne({ email: ADMIN_EMAIL });
