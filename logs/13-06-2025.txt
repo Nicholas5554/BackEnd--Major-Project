@@ -1,0 +1,2 @@
+13.6.2025 | 8:40:02 | GET | /users/684b05508bebed58eb8db2fa | 400 | 13.501ms
+13.6.2025 | 8:40:02 | GET | /users/684b05508bebed58eb8db2fa | 400 | 4.446ms

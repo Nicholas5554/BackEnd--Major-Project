@@ -3,7 +3,6 @@ import router from "./router/router.js";
 import { badRequest } from "./middlewares/badRequest.js";
 import { conn } from "./services/db.service.js";
 import User from "./users/models/user.schema.js";
-import usersSeed from "./users/initialData/initialusers.json" with {type: "json"};
 import chalk from "chalk";
 import { hashPassword } from "./users/services/password.service.js";
 import dotenv from "dotenv";
@@ -13,7 +12,7 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 
 dotenv.config();
-const { PORT } = process.env;
+const { PORT, ADMIN_EMAIL, ADMIN_PASSWORD, SEED_ADMIN } = process.env;
 
 const app = express();
 const server = createServer(app);
@@ -39,28 +38,43 @@ app.use((err, req, res, next) => {
     res.status(500).send("Oh oh, something broke");
 });
 
-// Handle WebSocket Connections
-io.on("connection", (socket) => {
-    console.log("A user connected:", socket.id);
-
-    socket.on("disconnect", () => {
-        console.log("User disconnected:", socket.id);
-    });
-});
-
 // Database Connection & Seeding
-/* const startServer = async () => {
+const startServer = async () => {
     try {
         await conn();
-        const usersFromDb = await User.find();
+        await User.find();
 
-        usersSeed.forEach(async (user) => {
-            if (!usersFromDb.find((dbUser) => dbUser.email === user.email)) {
-                const newUser = new User(user);
-                newUser.password = await hashPassword(newUser.password);
-                await newUser.save();
+        if (SEED_ADMIN === "true") {
+            const existing = await User.findOne({ email: ADMIN_EMAIL });
+            if (!existing) {
+                const hashedPassword = await hashPassword(ADMIN_PASSWORD);
+                const adminUser = new User({
+                    name: {
+                        first: "admin",
+                        middle: "",
+                        last: "admin",
+                    },
+                    image: {
+                        url: "https://cdn.mos.cms.futurecdn.net/o2QR532EoNCFnrvjuia6r6-320-80.jpg",
+                        alt: "iphone 16",
+                    },
+                    isManager: true,
+                    isAdmin: true,
+                    phone: "0541231234",
+                    email: ADMIN_EMAIL,
+                    password: hashedPassword,
+                    address: {
+                        country: "Israel",
+                        city: "tel aviv",
+                        street: "tel aviv street",
+                        houseNumber: 130,
+                    },
+                });
+
+                await adminUser.save();
             }
-        });
+        }
+
 
         server.listen(PORT, () => {
             console.log(chalk.green(`Server is running on port: ${PORT}`));
@@ -69,6 +83,6 @@ io.on("connection", (socket) => {
     } catch (error) {
         console.error("Database connection failed:", error);
     }
-}; */
+};
 
 startServer();
