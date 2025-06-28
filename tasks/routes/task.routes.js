@@ -26,8 +26,12 @@ tasksRouter.get("/my-createdTasks", auth, async (req, res) => {
 
     if (!taskUserId) {
         res.status(401).send("Unauthorized user");
+    }
+    if (taskUserId.length === 0) {
+        return res.json([]);
+    }
 
-    } else {
+    else {
         try {
             return res.json(taskUserId);
         } catch (err) {
@@ -42,7 +46,7 @@ tasksRouter.get("/myAssignedTasks", auth, async (req, res) => {
         const user = req.user;
         const tasks = await getTaskByAssign(user._id);
         if (!tasks || tasks.length === 0) {
-            return res.status(400).send("no tasks found");
+            return res.json([]);
         }
         return res.json(tasks);
     } catch (err) {

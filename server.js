@@ -50,24 +50,12 @@ const startServer = async () => {
                 const adminUser = new User({
                     name: {
                         first: "admin",
-                        middle: "",
                         last: "admin",
-                    },
-                    image: {
-                        url: "https://cdn.mos.cms.futurecdn.net/o2QR532EoNCFnrvjuia6r6-320-80.jpg",
-                        alt: "iphone 16",
                     },
                     isManager: true,
                     isAdmin: true,
-                    phone: "0541231234",
                     email: ADMIN_EMAIL,
                     password: hashedPassword,
-                    address: {
-                        country: "Israel",
-                        city: "tel aviv",
-                        street: "tel aviv street",
-                        houseNumber: 130,
-                    },
                 });
 
                 await adminUser.save();

@@ -18,6 +18,10 @@ const userRouter = Router();
 userRouter.get("/", auth, adminOnly, async (req, res) => {
     try {
         const users = await getAllUsers();
+
+        if (users.length === 0) {
+            return res.json([]);
+        }
         res.json(users);
     } catch (err) {
         res.status(500).send(err.message);
@@ -38,7 +42,7 @@ userRouter.get("/myworkers", auth, adminOrManagerOnly, async (req, res) => {
         const workers = await User.find({ managerId }).select("-password");
 
         if (workers.length === 0) {
-            return res.status(404).send("No workers found for this manager");
+            return res.json([]);
         }
 
         res.json(workers);
@@ -164,8 +168,8 @@ userRouter.put("/:id", auth, userOnly, async (req, res) => {
     }
 });
 
-// deleting a user by his id (only the registered user or admin)
-userRouter.delete("/:id", auth, adminOrUser, async (req, res) => {
+// deleting a user by his id (only the manager or admin)
+userRouter.delete("/:id", auth, adminOrManagerOnly, async (req, res) => {
 
     const id = req.params.id;
 
@@ -188,8 +192,8 @@ userRouter.delete("/:id", auth, adminOrUser, async (req, res) => {
     }
 });
 
-// changing the user's authentication level (only the registered user or admin)
-userRouter.patch("/:id", auth, adminOrUser, async (req, res) => {
+// changing the user's authentication level (only the manager or admin)
+userRouter.patch("/:id", auth, adminOrManagerOnly, async (req, res) => {
     try {
         const user = await changeAuthLevel(req.params.id);
         res.json({ message: "Manager Status changed to " + user.isManager, user });
