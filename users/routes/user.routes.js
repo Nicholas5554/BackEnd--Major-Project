@@ -6,7 +6,7 @@ import User from "../models/user.schema.js";
 import { comparePassword, hashPassword } from "../services/password.service.js";
 import { generateToken } from "../../services/auth.service.js";
 import { auth } from "../../middlewares/auth.js";
-import { adminOnly, adminOrUser, userOnly } from "../../middlewares/userAuthentication.js";
+import { adminOnly, adminOrUser, userOnly, adminOrManagerOnly } from "../../middlewares/userAuthentication.js";
 import { io } from "../../server.js";
 import updateUserValidation from "../validations/updateUserValidation.Schema.js";
 
@@ -19,6 +19,29 @@ userRouter.get("/", auth, adminOnly, async (req, res) => {
     try {
         const users = await getAllUsers();
         res.json(users);
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+});
+// getting the logged in user (only for registered users)
+userRouter.get("/me", auth, async (req, res) => {
+    const user = await User.findById(req.user._id).select("-password");
+    if (!user) {
+        return res.status(404).send("User not found");
+    }
+    res.send(user);
+})
+
+userRouter.get("/myworkers", auth, adminOrManagerOnly, async (req, res) => {
+    try {
+        const managerId = req.user._id;
+        const workers = await User.find({ managerId }).select("-password");
+
+        if (workers.length === 0) {
+            return res.status(404).send("No workers found for this manager");
+        }
+
+        res.json(workers);
     } catch (err) {
         res.status(500).send(err.message);
     }
@@ -47,6 +70,30 @@ userRouter.post("/register", async (req, res) => {
     try {
         const data = req.body;
         data.password = await hashPassword(data.password);
+        const newUser = await createUser(data);
+
+        res.json({ message: "User added successfully", newUser });
+
+    } catch (err) {
+        return res.status(500).send(err.message);
+    }
+});
+
+
+
+// add a worker (only for admin or manager)
+userRouter.post("/addworker", auth, adminOrManagerOnly, async (req, res) => {
+    const { error } = registerValidationSchema.validate(req.body, { abortEarly: false });
+
+    if (error) {
+        return res.status(400).json({ errors: error.details.map((p) => p.message) });
+    }
+
+    try {
+        const data = req.body;
+        data.password = await hashPassword(data.password);
+        data.managerId = req.user._id;
+
         const newUser = await createUser(data);
 
         res.json({ message: "User added successfully", newUser });

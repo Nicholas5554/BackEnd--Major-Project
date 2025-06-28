@@ -1,0 +1,7 @@
+26.6.2025 | 19:15:56 | GET | /users/me | 401 | 5.699ms
+26.6.2025 | 19:15:56 | GET | /users/me | 401 | 1.578ms
+26.6.2025 | 19:16:00 | POST | /users/login | 404 | 30.985ms
+26.6.2025 | 19:29:59 | GET | /tasks/myAssignedTasks | 400 | 4.138ms
+26.6.2025 | 19:29:59 | GET | /tasks/myAssignedTasks | 400 | 8.193ms
+26.6.2025 | 20:07:33 | GET | /tasks/myAssignedTasks | 400 | 7.564ms
+26.6.2025 | 20:07:33 | GET | /tasks/myAssignedTasks | 400 | 10.254ms
