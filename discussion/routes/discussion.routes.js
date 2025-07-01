@@ -141,10 +141,6 @@ discussionRouter.get("/:id/comments", auth, adminOrUserDiscussionOrActiveUser, a
     try {
         const discussionComments = await getCommentsByDiscussionId(req.params.id);
 
-        if (!discussionComments || discussionComments.length === 0) {
-            return res.status(400).send("no comments found");
-        };
-
         return res.status(200).json({ comments: discussionComments });
     } catch (err) {
         res.status(500).json({ error: err.message });
