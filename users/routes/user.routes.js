@@ -29,11 +29,18 @@ userRouter.get("/", auth, adminOnly, async (req, res) => {
 });
 // getting the logged in user (only for registered users)
 userRouter.get("/me", auth, async (req, res) => {
-    const user = await User.findById(req.user._id).select("-password");
-    if (!user) {
-        return res.status(404).send("User not found");
+    try {
+        const user = await User.findById(req.user._id).select("-password");
+        if (!user) {
+            return res.status(404).send("User not found");
+        }
+        res.send(user);
+
+    } catch (err) {
+        res.status(500).send(err.message);
     }
-    res.send(user);
+
+
 })
 
 userRouter.get("/myworkers", auth, adminOrManagerOnly, async (req, res) => {
@@ -151,6 +158,7 @@ userRouter.put("/:id", auth, userOnly, async (req, res) => {
     try {
         const data = req.body;
         const id = req.params.id;
+        data.password = await hashPassword(data.password)
 
         const user = await updateUser(id, data);
 

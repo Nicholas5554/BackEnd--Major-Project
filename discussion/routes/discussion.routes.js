@@ -76,6 +76,8 @@ discussionRouter.post("/", auth, async (req, res) => {
         data.userId = user._id;
 
         const discussion = await createDiscussion(data);
+        discussion.users.push(user._id);
+        await discussion.save();
         if (!discussion) {
             res.status(400).send("discussion was not created");
         }
