@@ -158,7 +158,6 @@ userRouter.put("/:id", auth, userOnly, async (req, res) => {
     try {
         const data = req.body;
         const id = req.params.id;
-        data.password = await hashPassword(data.password)
 
         const user = await updateUser(id, data);
 
