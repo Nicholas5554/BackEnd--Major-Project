@@ -22,9 +22,16 @@ const registerValidationSchema = joi.object({
         )
         .rule({
             message:
-                'password must be at least 6 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*-)',
+                'password must be 6+ characters, include uppercase, lowercase, number, and special character (!@#$%^&*-)',
         })
         .required(),
+
+    photoFile: joi.alternatives()
+        .try(
+            joi.any(),
+            joi.string().regex(/^data:image\/(jpeg|png|gif|webp|svg\+xml);base64,([A-Za-z0-9+/=])+$/)
+        )
+        .optional(),
 
     isManager: joi.boolean().default(false)
 });

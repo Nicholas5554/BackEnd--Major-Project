@@ -1,0 +1,4 @@
+11.10.2025 | 14:10:20 | POST | /users/register | 500 | 29.925ms
+11.10.2025 | 14:19:33 | POST | /users/register | 500 | 30.943ms
+11.10.2025 | 14:23:12 | POST | /users/register | 500 | 36.322ms
+11.10.2025 | 14:26:42 | POST | /users/register | 500 | 31.008ms

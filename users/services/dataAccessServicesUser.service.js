@@ -13,9 +13,7 @@ const getUserById = async (userId) => {
             "_id",
             "name",
             "email",
-            "image",
-            "phone",
-            "address",
+            "photoFile",
             "isManager",
             "isAdmin"
         ]);
@@ -39,9 +37,7 @@ const getAllUsers = async (allUsers) => {
                 "_id",
                 "name",
                 "email",
-                "image",
-                "phone",
-                "address",
+                "photoFile",
                 "isManager"
             ]);
         });
@@ -65,9 +61,7 @@ const createUser = async (newUser) => {
             "_id",
             "name",
             "email",
-            "image",
-            "phone",
-            "address",
+            "photoFile",
             "isManager"
         ]);
 
@@ -89,9 +83,7 @@ const updateUser = async (userId, updateData) => {
             "_id",
             "name",
             "email",
-            "image",
-            "phone",
-            "address",
+            "photoFile",
             "isManager",
             "isAdmin"
         ]);
@@ -125,9 +117,7 @@ const changeAuthLevel = async (userId) => {
             "_id",
             "name",
             "email",
-            "image",
-            "phone",
-            "address",
+            "photoFile",
             "isManager"
         ]);
 

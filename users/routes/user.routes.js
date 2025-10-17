@@ -41,8 +41,9 @@ userRouter.get("/me", auth, async (req, res) => {
     }
 
 
-})
+});
 
+// get all the user's workers
 userRouter.get("/myworkers", auth, adminOrManagerOnly, async (req, res) => {
     try {
         const managerId = req.user._id;

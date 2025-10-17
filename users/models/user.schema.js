@@ -9,6 +9,7 @@ const userSchema = new Schema({
     isAdmin: { type: Boolean, default: false },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    photoFile: { type: String, required: false },
     managerId: { type: Schema.Types.ObjectId, ref: "User" },
 });
 

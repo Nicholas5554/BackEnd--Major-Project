@@ -18,6 +18,12 @@ const updateUserValidation = joi.object({
             "string.empty": "Email is required",
             "any.required": "Email is required"
         }),
+    photoFile: joi.alternatives()
+        .try(
+            joi.any(),
+            joi.string().regex(/^data:image\/(jpeg|png|gif|webp|svg\+xml);base64,([A-Za-z0-9+/=])+$/)
+        )
+        .optional(),
 
     isManager: joi.boolean().default(false),
 });
