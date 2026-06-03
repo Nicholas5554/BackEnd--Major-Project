@@ -159,7 +159,6 @@ userRouter.put("/:id", auth, userOnly, async (req, res) => {
     try {
         const data = req.body;
         const id = req.params.id;
-
         const user = await updateUser(id, data);
 
         try {
