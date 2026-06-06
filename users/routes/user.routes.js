@@ -39,8 +39,6 @@ userRouter.get("/me", auth, async (req, res) => {
     } catch (err) {
         res.status(500).send(err.message);
     }
-
-
 });
 
 // get all the user's workers

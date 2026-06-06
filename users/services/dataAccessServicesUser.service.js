@@ -103,7 +103,7 @@ const changeAuthLevel = async (userId) => {
         }
 
         if (user.isAdmin) {
-            return;
+            throw new Error("Admin cannot be personal level")
         }
         if (user.isManager) {
             user.isManager = false;

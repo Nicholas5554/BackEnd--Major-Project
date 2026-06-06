@@ -1,0 +1,6 @@
+06/06/2026 | 8:54:02 | GET | /users/me | 401 | 13.601ms
+06/06/2026 | 8:54:02 | GET | /users/me | 401 | 1.522ms
+06/06/2026 | 9:04:38 | GET | /users/myworkers | 401 | 14.409ms
+06/06/2026 | 9:04:38 | GET | /users/myworkers | 401 | 0.766ms
+06/06/2026 | 9:04:38 | GET | /favicon.ico | 404 | 11.414ms
+06/06/2026 | 9:04:39 | GET | /favicon.ico | 404 | 4.533ms
