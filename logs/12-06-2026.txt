@@ -1,0 +1,9 @@
+12/06/2026 | 16:34:49 | GET | /users/me | 401 | 11.650ms
+12/06/2026 | 16:34:49 | GET | /users/me | 401 | 1.572ms
+12/06/2026 | 16:41:30 | POST | /users/register | 400 | 6.602ms
+12/06/2026 | 16:41:53 | POST | /users/register | 400 | 1.918ms
+12/06/2026 | 16:42:12 | POST | /users/register | 400 | 2.257ms
+12/06/2026 | 16:42:49 | POST | /users/register | 400 | 1.380ms
+12/06/2026 | 16:42:58 | POST | /users/register | 400 | 0.797ms
+12/06/2026 | 16:45:14 | POST | /users/register | 500 | 201.971ms
+12/06/2026 | 16:46:48 | POST | /users/register | 500 | 150.303ms
